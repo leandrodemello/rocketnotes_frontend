@@ -1,14 +1,18 @@
 import { Container } from './styles';
+
+import { Header } from '../../components/Header';
 import { Button } from '../../components/Button';
+
 
 export function Details(){ 
 
   return(// um componente retorna um único elemento
     <Container>
-        <h1>Hello World!</h1>
-        <span>Leandro Mello</span>
+      
+      <Header />
 
-        <Button />
+      <Button title="Voltar"/>
+       
         
     </Container>
   )
