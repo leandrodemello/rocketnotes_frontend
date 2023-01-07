@@ -5,6 +5,7 @@ import { Button } from '../../components/Button';
 import { Section } from '../../components/Section';
 
 
+
 export function Details(){ 
 
   return(// um componente retorna um único elemento
