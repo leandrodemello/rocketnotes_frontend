@@ -20,10 +20,10 @@ export function Details(){
         </Links>
       </Section>
 
-
       <Button title="Voltar"/>
     </Container>
   )
   
+
 }; 
    
