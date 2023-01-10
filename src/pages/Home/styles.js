@@ -18,6 +18,7 @@ export const Container = styled.div`
 
 export const Brand = styled.div`
   grid-area: brand;
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 
   display: flex;
   justify-content: center;
@@ -26,8 +27,6 @@ export const Brand = styled.div`
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
-
-  border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 
   > h1 {
     font-size: 24px;
@@ -51,15 +50,27 @@ export const Menu = styled.ul`
 
 export const Search = styled.div`
       grid-area: search;
-      background: green;
+      padding: 64px 64px 0;
+     
 `;
 
 export const Content = styled.div`
       grid-area: content;
-      background: violet;
+      
 `;
 
 export const NewNote = styled.button`
       grid-area: newnote;
-      background: yellow;
+      
+      background: ${({ theme }) => theme.COLORS.ORANGE};
+      border: none;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        margin-left: 16px;
+      }
+      
 `;
