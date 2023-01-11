@@ -19,6 +19,7 @@ export const Form = styled.form`
 
   text-align: center;
 
+
   > h1 {
     font-size: 48px;
     color: ${({ theme }) => theme.COLORS.ORANGE};
@@ -27,6 +28,7 @@ export const Form = styled.form`
   > h2 {
     font-size: 24px;
     margin: 48px 0;
+    
   }
 
   > p {
