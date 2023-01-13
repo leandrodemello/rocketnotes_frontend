@@ -14,5 +14,6 @@ export const Container = styled.section`
       color: ${({ theme }) => theme.COLORS.GRAY_100};
       font-size: 20px; // COR DO TEXTO
       font-weight: 400; //TAMANHO DA FONTE
+     
     }
 `;
