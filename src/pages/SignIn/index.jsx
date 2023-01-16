@@ -32,6 +32,7 @@ export function SignIn() {
         </Button>
 
         <a href="#">
+          <FiLock />
           Criar conta
         </a>
         
