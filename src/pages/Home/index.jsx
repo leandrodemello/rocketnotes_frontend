@@ -1,14 +1,14 @@
-import { FiPlus, FiSearch } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
-import { Container, Brand, Menu, Search, Content, NewNote } from './styles';
+import { FiPlus, FiSearch } from 'react-icons/fi';
 
 import { Note } from '../../components/Note';
 import { Input } from '../../components/Imput';
-
 import { Header } from '../../components/Header';
 import { Section } from '../../components/Section';
 import { ButtonText } from '../../components/ButtonText';
 
+import { Container, Brand, Menu, Search, Content, NewNote } from './styles';
 
 
 
@@ -47,7 +47,7 @@ export function Home(){
         </Section>
       </Content>
 
-      <NewNote>
+      <NewNote to="/New">
         <FiPlus />
         Criar nota
       </NewNote>
