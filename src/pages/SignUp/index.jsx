@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { FiMail, FiLock, FiUser, FiArrowLeft} from 'react-icons/fi';
+import { useState } from 'react'; 
+import { FiMail, FiLock, FiUser, FiArrowLeft} from 'react-icons/fi'; 
 
 import { Link } from 'react-router-dom';
 
-import { api } from "../../"
+import { api } from "../../services/api" 
 
 import { Input } from '../../components/Imput';
 import { Button } from '../../components/Button';
@@ -17,9 +17,7 @@ export function SignUp() {
   const [password, setPassword] = useState("");
 
   function handleSignUp() {
-    if (!name || !email || !password) {
-      return alert("Preencha todos os campos!")
-    }
+    console.log(name, email, password)
   }
 
   return (
@@ -36,7 +34,7 @@ export function SignUp() {
           placeholder="Nome"
           type="text"
           icon={FiUser}
-          onChange={e => setName(e.target.value)}   //TODA VEZ QUE O VALOR DO INPUT MUDA, O ONCHANGE DISPARA UM EVENTO!
+          onChange={e => setName(e.target.value)}  
         />
 
         <Input
@@ -53,9 +51,7 @@ export function SignUp() {
           onChange={e => setPassword(e.target.value)}
         />
 
-        <Button 
-          title="Cadastrar">
-        </Button>
+        <Button title="Cadastrar" onClick={handleSignUp} />
         
         <Link to="/">
         <FiArrowLeft />
