@@ -1,8 +1,6 @@
 import { Container, Form, Background } from './styles';
 import { FiMail, FiLock, FiUser, FiArrowLeft} from 'react-icons/fi'; 
 
-import { api } from "../../services/api";
-
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Imput';
 
@@ -10,6 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { useState } from 'react'; 
 
+import { api } from "../../services/api";
 
 export function SignUp() {
   const [name, setName] = useState("");
