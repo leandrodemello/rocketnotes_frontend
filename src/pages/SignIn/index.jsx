@@ -8,11 +8,18 @@ import { Button } from '../../components/Button';
 
 import { useAuth } from '../../hooks/auth'
 
+import { useState } from 'react';
+
 
 export function SignIn() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const data = useAuth();
-  console.log("MEU CONTEXTO =>", data);
+  const { signIn } = useAuth();
+
+  function handleSignIn(){
+    signIn({ email, password});
+  }
 
   return (
     <Container>
@@ -26,16 +33,18 @@ export function SignIn() {
           placeholder="E-mail"
           type="tetx"
           icon={FiMail}
+          onChange={e => setEmail(e.target.value)}
         />
 
         <Input
           placeholder="Senha"
           type="password"
           icon={FiLock}
+          onChange={e => setPassword(e.target.value)}
         />
 
         <Button 
-          title="Entrar">
+          title="Entrar" onClick={handleSignIn}>
         </Button>
 
         <Link to="/register">
