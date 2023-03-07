@@ -23,14 +23,14 @@ export function Profile() {
   async function handleUpdate() {
     const user = {
       name, 
-      email, 
-      password: passwordNew, 
+      email,  
+      password: passwordNew,
       old_password: passwordOld,
-    }
+    };
 
     await updateProfile({ user });
-
   }
+
 
   return (
     <Container>
@@ -59,36 +59,39 @@ export function Profile() {
         </Avatar>
 
         <Input 
-          placeholder="Nome"
-          type="text"
           icon={FiUser}
+          placeholder="Usuário"
+          type="text"
           value={name}
-          onChange={e => setName(e.target.value)}
+          onChange={(e) => setName(e.target.value)}
         />
 
         <Input 
+          icon={FiMail}
           placeholder="E-mail"
           type="text"
-          icon={FiMail}
           value={email}
           onChange={e => setEmail(e.target.value)}
         />
 
         <Input 
+          icon={FiLock}
           placeholder="Senha atual"
           type="password"
-          icon={FiLock}
           onChange={e => setPasswordOld(e.target.value)}
         />
 
         <Input 
+          icon={FiLock}
           placeholder="Nova senha"
           type="password"
-          icon={FiLock}
           onChange={e => setPasswordNew(e.target.value)}
         />
 
-        <Button title="Salvar" onclick={handleUpdate} />
+        <Button 
+        title="Salvar" onClick={handleUpdate}>
+        </Button> 
+        
 
       </Form>
 
