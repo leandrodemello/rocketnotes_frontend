@@ -8,7 +8,7 @@ import { Button } from '../../components/Button';
 
 import {api} from '../../services/api';
 
-import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
 
 import { Container, Form, Avatar } from "./styles";
 
@@ -111,3 +111,4 @@ export function Profile() {
     </Container>
   );
 }
+
