@@ -1,18 +1,16 @@
 import { useState } from 'react';
-import { useAuth } from '../../hooks/auth';
-
+import { Link } from 'react-router-dom';
 import { FiArrowLeft, FiUser, FiMail, FiLock, FiCamera } from 'react-icons/fi';
+
+import { useAuth } from '../../hooks/auth';
+import {api} from '../../services/api';
 
 import { Input } from '../../components/Imput';
 import { Button } from '../../components/Button';
-
-import {api} from '../../services/api';
-
 import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
 
 import { Container, Form, Avatar } from "./styles";
 
-import { Link } from 'react-router-dom';
 
 export function Profile() {
   const { user, updateProfile } = useAuth();
@@ -27,14 +25,16 @@ export function Profile() {
   const [avatarFile, setAvatarFile] = useState(null);
 
   async function handleUpdate() {
-    const user = {
+    const updated = {
       name, 
       email,  
       password: passwordNew,
       old_password: passwordOld,
     };
 
-    await updateProfile({ user, avatarFile });
+    const userUpdated = Object.assign(user, updated);
+
+    await updateProfile({ user: userUpdated, avatarFile });
   }
 
   function handleChangeAvatar(event) {
