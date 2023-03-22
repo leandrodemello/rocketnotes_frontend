@@ -109,7 +109,6 @@ export function New(){
 
           <Section title="Marcadores" >
             <div className="tags">
-
             {
               tags.map((tag, index) => (
                 <NoteItem 
@@ -123,8 +122,8 @@ export function New(){
               <NoteItem 
                 isNew 
                 placeholder="Nova tag"
-                value={newTag}
                 onChange={e => setNewTag(e.target.value)}
+                value={newTag}
                 onClick={handleAddTag}
 
               />
